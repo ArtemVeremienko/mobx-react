@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+#root {
   min-height: 100vh;
+}
+
+.app {
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.counter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1rem;
+  border: 2px solid blueviolet;
+  border-radius: 4px;
+}
+
+.counter__state {
+  font-size: 1.2rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  background: gold;
+  border: 1px solid darkgoldenrod;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: darkgoldenrod;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.list {
+  padding: 0;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid skyblue;
+}
+
+.list__item + .list__item {
+  margin-top: 5px;
+}
+
+.list__btn {
+  margin-left: auto;
+  padding: 5px 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: 1px solid skyblue;
 }
